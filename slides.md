@@ -22,9 +22,9 @@ css: unocss
 
 # WebTigerPython
 
-## Placeholder
+## Automatic assessment for visual computing
 
-Author
+Clemens Bachmann
 
 ---
 layout: two-cols-header
@@ -33,104 +33,257 @@ layout: two-cols-header
 # Who am I
 
 ::left::
-- Name: Mona Lisa
-- Occupation: Developer
-- Email: mona@lisa.io
+- Clemens Bachmann
+- Doctoral Student
+- clemens.bachmann@inf.ethz.ch
+- Algorithms and **Didactics** Group
+- Working in the Group of Dennis Komm
+- Teaching Experience
 
 ::right::
-<div>
-  <img src="./images/monalisa.jpg" width=150 class="absolute right-50px top-90px"/>
+<img src="./images/Clemens_Flaechen.svg" style="filter: brightness(0) saturate(100%) invert(80%);" width=300/>
+
+[Illustration by Anna Staub](https://www.instagram.com/anna.staub.illustration/?hl=en)
+
+---
+layout: two-cols-header
+---
+
+# TigerJython 2012- (A bit of History)
+
+::left::
+- Jython
+- Visual Computing
+  - Turtle, Games
+- Robotics
+  - micro:bit
+  - Mindstorms EV3
+  - etc.
+- Works on any Plattform (Windows, Mac, Linux)
+- Easy installation
+- Interactive Debugger
+- Extended Syntax e.g.
+  - repeat loop
+  - autocasting of inputs
+
+::right::
+<img src="https://www.jython.org/assets/jython.png" width="250"/>
+<br>
+<img src="./images/tigerjython.png" width="350"/>
+
+---
+layout: wtp-2-cols
+code: |
+  from gturtle import *
+
+  setFillColor("magenta")
+  setPenColor("magenta")
+  startPath()
+  for i in range(5):
+      fd(160)
+      rt(144)
+  fillPath()
+---
+
+# What is WebTigerPython
+
+<v-clicks>
+
+- IDE
+- WebBased
+  - No installation required
+  - Works on any device
+- For beginners
+- Lots of libraries
+  - Turtle
+
+</v-clicks>
+
+---
+layout: wtp-2-cols
+device: micro:bit
+code: |
+  from mbrobot import *
+  from microbit import *
+
+  setSpeed(100)
+  repeat:
+    v = irLeft.read_digital()
+    if v == 0:
+        rightArc(0.1)
+    else: 
+        leftArc(0.1)
+    sleep(100)
+wtpLayout: '[["Editor", "Canvas"]]'
+---
+
+# What is WebTigerPython
+
+- IDE
+- WebBased
+  - No installation required
+  - Works on any device
+- For beginners
+- Lots of libraries
+  - Turtle
+  - Robotics
+
+---
+layout: wtp-2-cols
+code: |
+  numbers = [3,7,12,56]
+  total_sum = 0
+  count = 0
+  
+  for number in numbers:
+      total_sum += number
+      count += 1
+
+  print(total_sum / count)
+wtpLayout: '[["Editor", "Console"]]'
+---
+
+# What is WebTigerPython
+
+- IDE
+- WebBased
+  - No installation required
+  - Works on any device
+- For beginners
+- Lots of libraries
+  - Turtle
+  - Robotics
+  - Debugger
+
+<v-clicks>
+
+- More examples on [python-online.ch](https://python-online.ch)
+
+</v-clicks>
+
+---
+layout: two-cols-header
+---
+# Some Numbers
+
+::left::
+
+- About 500 - 1000 daily users
+- Used in Switzerland
+  - Also Austria and Germany
+
+- We collect error messages
+
+::right::
+<img src="./images/wtp_error_reports.png" alt="drawing" width="300"/>
+  
+---
+
+# Teacher Feedback
+
+- Ubiquitiy is appreciated
+- Code sharing / iframe integration
+- Simplicity
+
+---
+layout: two-cols-header
+---
+
+# Research Focus: Automated Assignments
+
+::left::
+
+- Defining Test Cases 
+  - Needs deeper knowledge
+  - Takes up time
+  - Limits how you structure code
+    - Define functions with specific names (extranous load)
+
+- Limitations
+  - Coverage
+  - Tolerance
+
+::right::
+
+<div style="transform: scale(1); transform-origin:top left">
+
+```mermaid
+graph LR
+  A(Submission 
+   <img src="./images/turtleSquares.png"/>)
+  B(Text output)
+  C(Visual Output <img src="./images/onlySquares.png"/>)
+  D(Abstract Syntax Tree)
+
+  A --> B
+  A --> C
+  A --> D
+```
+
+
 </div>
 
 ---
-layout: wtp-2-cols
-code: |
-  from turtle import *
 
-  forward(100)
----
+# Automated Assignments: Visual Computing
 
-# Turtle Graphics 🐢
-
-<v-clicks>
-
-- Basic instructions
-
-</v-clicks>
-
----
-layout: wtp-2-cols
-code: |
-  from microbit import *
-
-  while True:
-    display.show(Image.HEART)
-    sleep(500)
-    display.clear()
-    sleep(500)
-device: micro:bit
----
-
-# BBC Micro:bit 🖥️
-
-<v-clicks>
-
-- Compact educational microcontroller
-- Python programmable
-- Built-in sensors
-  - Accelerometer
-  - Temperature
-  - Compass
-
-</v-clicks>
+```mermaid
+graph LR
+  A(Submission <img src="./images/turtleSquares.png"/>)
+  B(Visual Dump <img src="./images/json_dump_turtle.png"/>)
+  D(Abstact Syntax Tree)
+  B1(Objects Comparison
+    - Objects
+    - Turtle Pos
+    - Topology)
+  D1(Complexity Analysis
+    - Loops
+    - Modularity)
+  A --> B
+  A --> D
+  B --> B1
+  D --> D1
+```
 
 ---
-layout: wtp-2-cols
-code: |
-  import sqlite3
 
-  # Connect to database
-  conn = sqlite3.connect('example.db')
-  cursor = conn.cursor()
+# Mastersolution to Testcase
+
+```mermaid
+graph LR
+  A(Master Solution <img src="./images/turtleSquares.png"/>)
+  B(Visual Dump <img src="./images/json_dump_turtle.png"/>)
+  D(Abstact Syntax Tree)
+  B1(Objects Comparison
+    - Objects
+    - Turtle Pos
+    - Topology)
+  D1(Complexity Analysis
+    - Loops
+    - Modularity)
+  E(Test Cases)
+  A --> B
+  A --> D
+  B --> B1
+  D --> D1
+  B1 --> E
+  D1 --> E
+```
+
 ---
 
-# SQLite3 in Python 💾
+# Further Thoughts
 
-<v-clicks>
-
-- Embedded relational database
-- No separate server process
-- Lightweight and portable
-- Built into Python standard library
-
-</v-clicks>
+- Generalizibility
+- Easy Integration
+  - Test sharing with url
+  - Run test with iframe
+- Event handling testing?
 
 ---
-layout: wtp-2-cols
-code: |
-  rows = 10
-  print("Pyramid Pattern:")
-  for i in range(rows):
-      print(" " * (rows - i - 1) + "*" * (2 * i + 1))
-  print()
-wtpLayout: '["Editor", "Console"]'
----
 
-# No Canvas View 💾
+# Related Research
 
-<v-clicks>
-
-- Layout can also be specified
-- Components
-  - Editor
-  - Canvas
-  - Console
-- Only 1 Canvas
-- Specified in nested list
-  - e.g. '["Editor", "Console"]'
-
-</v-clicks>
-
---- 
-
-Feel free to let me know if you need any further adjustments!
+VISGRADER: Automatic Grading of D3 Visualizations
+  - Use Topology of DOMS
+<img src="./images/visgrader_screenshot.png" alt="drawing" width="300"/>

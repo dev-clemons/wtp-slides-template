@@ -1,0 +1,9 @@
+...whatever you want in the banner at the top...
+
+--split--
+
+...whatever you want in the left column...
+
+--split--
+
+...whatever you want in the right column...
