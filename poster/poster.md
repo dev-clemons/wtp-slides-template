@@ -20,21 +20,25 @@
 
 ## 1. Introduction
 
-Visual programming is often used in introductory programming courses because it provides direct feedback to users. However, there are some drawbacks, particularly in the area of autograding. Unlike text output, visual output can be more challenging to evaluate. While professional testing tools often rely on screenshot comparison, this method may not be suitable for computer science education. In recent years, we have developed **WebTigerPython**, a web-based IDE frequently used in schools in German-speaking regions, and we are planning to integrate automated testing for the platform, helping teachers giving instant feedback to students and making courses more scalable.
+Visual programming is often used in introductory programming courses as it brings the advantage of instant feedback to students. However, there are some drawbacks, particularly in the area of autograding which can be challenging for visual output.
+
+While traditional testing tools often rely on screenshot comparison, this method may not be suitable for computer science education since it only checks for a pixel-perfect solution instead of a deeper understanding of concepts.
+
+In recent years, we have developed **WebTigerPython**, a web-based IDE frequently used in schools in German-speaking regions, and we are planning to integrate concept-based testing for the platform, helping teachers giving instant feedback to students and making courses more scalable.
 
 ## 2. Background
 
-**WebTigerPython** is a browser-based Python IDE designed for computer science education. It supports a plethora of features, including:
+**WebTigerPython** is a browser-based Python IDE designed for computer science education. It supports a large set of features, including:
 
 ![](./wtp_koch.png)
 
 - **Zero-Installation**: Runs directly in any modern web browser. No login required.
-- **Universal Access**: Compatible with any device (laptops, tablets, Chromebooks).
-- **Powerful Libraries**: Built-in support for Turtle Graphics, robotics and more
+- **Universal Access**: Is compatible with any device (laptops, tablets, Chromebooks).
+- **Powerful Libraries**: Supports Turtle Graphics, robotics and more
 - **Beginner-Friendly**: Features an interactive debugger and simplified syntax to lower the barrier to entry.
-- **High Ceiling**: Supports advanced libraries like Pygame, NumPy, and SciPy.
+- **High Ceiling**: Provides advanced libraries like Pygame, NumPy, and SciPy.
 
-According to surveys among teachers, the platform is used in schools by students aged 12 - 17. Main reasons why teachers use the plattform is the light weighness, easy integratability and the minimalistic design. We do have about 1000 unique users on our platform.
+There are about 1000 unique daily users on our platform. It is used in classrooms (age group 12--17) mainly for its lightweightness, easy integratability, extensive feature scope, and minimalistic design.
 
 ## 3. Automated Assessment
 
@@ -64,7 +68,7 @@ One common solution is to use screenshot comparison and heatmaps, which highligh
 
 In the example with the heatmap, the visual outputs indicate that the student correctly set up two squares; however, the relative positioning and size of one square are incorrect. While developers may easily interpret these images, they may not be as intuitive for students. Additionally, requiring pixel-perfect solutions is not always desirable, as it can limit students' creative freedom in problem-solving.
 
-## 4. Our Approach: AST & Visual Dump
+## 4. Our Approach: Concept Based Testing
 
 In our approach, we aim to move away from traditional test cases and instead focus on exporting the objects rendered on the canvas for analysis. This allows us to evaluate the rendered objects, their relative positioning, and their connectedness. Additionally learning about the usage of control structures like loops, conditioan is an integral part in copmuter science eductation. This is someting that could be controlled by analyzing the abstact syntax tree (AST).
 
