@@ -1,9 +1,9 @@
 ---
 # try also 'default' to start simple
-theme: dracula
+theme: default
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
+# background: https://source.unsplash.com/collection/94734566/1920x1080
 # apply any windi css classes to the current slide
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
@@ -213,13 +213,10 @@ graph LR
    <img src="./images/turtleSquares.png"/>)
   B(Text output)
   C(Visual Output <img src="./images/onlySquares.png"/>)
-  D(Abstract Syntax Tree)
 
   A --> B
   A --> C
-  A --> D
 ```
-
 
 </div>
 
