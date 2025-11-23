@@ -5,7 +5,7 @@
     </div>
     <div class="iframe-container" :style="{ width: 'calc(100% - ' + leftWidth + ')' }">
       <div style="position: absolute;transform: scale(0.66); transform-origin: 0 0; width: 150%; height: 150%;">
-        <iframe :src="url.href" :style="{position: 'absolute',width: 'calc(100% - ' + leftWidth + ')', height: '100%'}" allow="usb;clipboard-write"></iframe>
+        <iframe :src="url.href" :style="{position: 'absolute',width: 'calc(100% - ' + leftWidth + ')', height: '100%'}" allow="usb;clipboard-write;bluetooth"></iframe>
       </div>div>
     </div>
   </div>
@@ -20,7 +20,7 @@ const props = defineProps({
   },
   leftWidth: {
     type: String,
-    default: '45%',
+    default: '35%',
   },
   device: {
     type: String,
