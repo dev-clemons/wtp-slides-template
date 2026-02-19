@@ -61,7 +61,7 @@ layout: two-cols-header
 
 ::right::
 
-<v-click at="3">
+<v-click at="2">
 
 | High Ceiling |  |
 |----|----|
@@ -69,11 +69,6 @@ layout: two-cols-header
 
 </v-click>
 
-<v-click at="2">
-
-# ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
-
-</v-click>
 
 <v-click at="1">
 
