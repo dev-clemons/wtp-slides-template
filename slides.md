@@ -12,7 +12,7 @@ highlighter: shiki
 lineNumbers: false
 # persist drawings in exports and build
 drawings:
-  persist: false
+  persist: true
 # use UnoCSS (experimental)
 wakeLock: "build"
 # aspect ratio for the slides
