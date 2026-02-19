@@ -67,7 +67,7 @@ layout: two-cols-header
 ::left::
 
 - Simple
-- Performant
+- Fast
 - Works on any device
 - Robotics
 - Visual Output
@@ -93,6 +93,7 @@ layout: two-cols-header
 
 ---
 layout: two-cols-header 
+zoom: 1.2
 ---
 
 # Implementation WebTigerPython
@@ -101,11 +102,11 @@ layout: two-cols-header
 
 - Works on any device -> Web Based
 - Web Worker to execute code
-- Web APIs for robotics
+- Web APIs for robotics / files
 
 ::right::
 
-![System Overview](./images/system_overview.svg)
+<img src="./images/system_overview.svg"> </img>
 
 ---
 layout: wtp-2-cols
@@ -113,7 +114,10 @@ code: |
   from gturtle import *
   makeTurtle()
 
-  for color in ["red", "blue", "darkgreen", "orange"]:
+  for color in ["red", 
+                "blue", 
+                "darkgreen", 
+                "orange"]:
       setPenColor(color)
       repeat 4:
           forward(100)
@@ -346,14 +350,14 @@ layout: two-cols
   
 <div style="display: flex; gap: 20px; align-items: center;">
   <SlidevVideo v-click="1" autoplay controls width="220px">
-    <source src="./images/pythonballs.mp4" type="video/webm" />
+    <source src="./images/pythonballs.mp4" type="video/mp4" />
   </SlidevVideo>
   <p>Native Python</p>
 </div>
 
 <div style="display: flex; gap: 20px; align-items: center;">
   <SlidevVideo v-click="1" autoplay controls width="220px">
-    <source src="./images/wtpballs.mp4" type="video/webm" />
+    <source src="./images/wtpballs.mp4" type="video/mp4" />
   </SlidevVideo>
   <p>WebTigerPython</p>
 </div>
