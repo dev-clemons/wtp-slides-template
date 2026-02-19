@@ -126,9 +126,9 @@ code: |
 ---
 # Low Floor 1 - Turtle
 
-- PixiJS
 - Reimplementation from scratch
   - TKinter does not work in the browser
+- PixiJS
 
 ---
 layout: wtp-2-cols
@@ -368,7 +368,7 @@ layout: two-cols
 
 - Userbase 12 years and above
   - Most Users 15 - 17 years
-- URL Sharing was appreciated
+- URL Sharing was liked
 - Easy integratable into other tools
 - Simple
 
@@ -392,5 +392,18 @@ layout: two-cols
 
 ---
 layout: wtp-2-cols
+code: |
+  from
 ---
-# Thank You
+# WebTigerPython
+
+- Educational IDE
+- Low Floor
+  - Turtle
+  - Robotics
+- High Ceiling
+  - Interactive Programming
+  - Scienctific Progamming
+- Benchmarks
+  - 2-3 Times slower than Native Python
+  - Graphics Rendering can be faster
