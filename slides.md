@@ -21,7 +21,7 @@ css: unocss
 canvasWidth: 900
 ---
 
-# WebTigerPython
+# WebTigerPython (WTP)
 
 ## A Low-Floor High-Ceiling Python IDE for the Browser
 ## SIGCSE 2026
@@ -340,9 +340,7 @@ layout: two-cols
 ---
 # Evaluation 2 - Graphics Benchmark
 
-- 1000 Balls
-- WebTigerPython looks smoother
-- CPython is outperformed
+- WTP outperforms Native Python in this benchmark
 
 <img width="300px" src="./images/balls_benchmark.jpg"></img>
 
@@ -406,4 +404,4 @@ code: |
   - Scienctific Progamming
 - Benchmarks
   - 2-3 Times slower than Native Python
-  - Graphics Rendering can be faster
+  - WTP turtle is faster in our Benchmark
