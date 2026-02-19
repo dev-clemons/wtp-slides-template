@@ -21,7 +21,7 @@ css: unocss
 canvasWidth: 900
 ---
 
-# WebTigerPython (WTP)
+# WebTigerPython
 
 ## A Low-Floor High-Ceiling Python IDE for the Browser
 ## SIGCSE 2026
