@@ -38,6 +38,7 @@ layout: two-cols-header
 - Name: Clemens Bachmann
 - Occupation: Doctoral Student
 - Email: clemens.bachmann@inf.ethz.ch
+- University: ETH Zürich (Switzerland)
 
 ::right::
 
@@ -92,7 +93,7 @@ layout: two-cols-header
 
 ::right::
 
-![System Overview](images/system_overview.svg)
+![System Overview](./images/system_overview.svg)
 
 ---
 layout: wtp-2-cols
@@ -326,20 +327,20 @@ layout: two-cols
 - WebTigerPython looks smoother
 - CPython is outperformed
 
-<img width="300px" src="images/balls_benchmark.jpg"></img>
+<img width="300px" src="./images/balls_benchmark.jpg"></img>
 
 ::right::
   
 <div style="display: flex; gap: 20px; align-items: center;">
   <SlidevVideo v-click="1" autoplay controls width="220px">
-    <source src="images/pythonballs.mp4" type="video/webm" />
+    <source src="./images/pythonballs.mp4" type="video/webm" />
   </SlidevVideo>
   <p>Native Python</p>
 </div>
 
 <div style="display: flex; gap: 20px; align-items: center;">
   <SlidevVideo v-click="1" autoplay controls width="220px">
-    <source src="images/wtpballs.mp4" type="video/webm" />
+    <source src="./images/wtpballs.mp4" type="video/webm" />
   </SlidevVideo>
   <p>WebTigerPython</p>
 </div>
