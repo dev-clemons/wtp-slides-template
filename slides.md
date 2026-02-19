@@ -47,10 +47,22 @@ layout: two-cols-header
 [Illustration by Anna Staub](https://www.instagram.com/anna.staub.illustration/?hl=en)
 
 ---
+zoom: 1.2
+---
+
+# Authors of this Paper
+
+- Clemens Bachmann Doctoral Student ETH Zürich (CH)
+- Alexandra Maximova Doctoral Student ETH Zürich (CH)
+- Dennis Komm Professor ETH Zürich (CH)
+- Tobias Kohn Professor KIT (DE)
+
+
+---
 layout: two-cols-header 
 ---
 
-# Requirements
+# Educational IDE - Requirements
 
 ::left::
 
@@ -83,7 +95,7 @@ layout: two-cols-header
 layout: two-cols-header 
 ---
 
-# Implementation
+# Implementation WebTigerPython
 
 ::left::
 
@@ -148,7 +160,7 @@ code: |
   plt.plot(x, f2, color="blue")
   plt.plot(x, f3, color="green")
 
-  plt. show()
+  plt.show()
 ---
 # High Ceiling 1 - Scientific Python
 
@@ -305,7 +317,8 @@ code: |
   - No animations
 
 ---
-
+zoom: 0.9
+---
 # Evaluation 1 - Compuing Benchmark
 
 ## Mandelbrot Set Computation
@@ -371,3 +384,9 @@ layout: two-cols
 - Multifile
 - Robots over WiFi
 ...
+
+
+---
+layout: wtp-2-cols
+---
+# Thank You
