@@ -26,7 +26,7 @@ canvasWidth: 900
 ## A Low-Floor High-Ceiling Python IDE for the Browser
 ## SIGCSE 2026
 
-Clemens Bachmann
+**Clemens Bachmann**, Alexandra Maximova, Tobias Kohn, Dennis Komm
 
 ---
 layout: two-cols-header
@@ -35,36 +35,26 @@ layout: two-cols-header
 # Who am I
 
 ::left::
-- Name: Clemens Bachmann
+- Name: Clemens Bachmann (he/him)
 - Occupation: Doctoral Student
-- Email: clemens.bachmann@inf.ethz.ch
 - University: ETH Zürich (Switzerland)
+- Email: clemens.bachmann@inf.ethz.ch
 
 ::right::
 
-<img src="./images/Clemens_Flaechen.svg" style="filter: brightness(0) saturate(100%) invert(80%);" width=300/>
+<img src="./images/Clemens_Flaechen.svg" style="filter: brightness(0) saturate(100%) invert(80%);" width=270/>
 
 [Illustration by Anna Staub](https://www.instagram.com/anna.staub.illustration/?hl=en)
 
 ---
-zoom: 1.2
----
-
-# Authors of this Paper
-
-- Clemens Bachmann Doctoral Student ETH Zürich (CH)
-- Alexandra Maximova Doctoral Student ETH Zürich (CH)
-- Dennis Komm Professor ETH Zürich (CH)
-- Tobias Kohn Professor KIT (DE)
-
-
----
-layout: two-cols-header 
+layout: two-cols-header
 ---
 
 # Educational IDEs - Problem Statement
 
 ::left::
+
+<v-clicks>
 
 - Easy to set up
   - no installation / login
@@ -72,11 +62,13 @@ layout: two-cols-header
   - BYOD
 - Simple UI
 - Reliable
-  - Replit
+  - Replit Education
+
+</v-clicks>
 
 ::right::
 
-<v-click at="2">
+<v-click at="+2">
 
 | High Ceiling |  |
 |----|----|
@@ -88,7 +80,7 @@ layout: two-cols-header
 <br>
 <br>
 
-<v-click at="1">
+<v-click at="-1">
 
 | Low Floor |  |
 |----|----|
@@ -96,9 +88,13 @@ layout: two-cols-header
 
 </v-click>
 
+<!--
+mention trinket.io
+-->
+
 ---
 layout: two-cols-header 
-zoom: 1.2
+zoom: 1.1
 ---
 
 # Implementation WebTigerPython
@@ -108,8 +104,8 @@ zoom: 1.2
 - Easy to set up -> Web Based
 - Works on any device -> Web Based
 - Reliable -> Open Source
-- Web Worker to execute code
-- Web APIs for robotics / files
+
+<img src="./images/webtigerpython_bild.svg"> </img>
 
 ::right::
 
@@ -124,14 +120,13 @@ zoom: 1.2
 ---
 layout: wtp-2-cols
 code: |
-  from gturtle import *
-  makeTurtle()
+  from turtle import *
 
   for color in ["red", 
                 "blue", 
                 "darkgreen", 
                 "orange"]:
-      setPenColor(color)
+      pencolor(color)
       repeat 4:
           forward(100)
           right(90)
@@ -328,22 +323,26 @@ layout: two-cols
 ---
 # Evaluation 2 - Graphics Benchmark
 
+<v-click at="2">
+
 - WTP outperforms Native Python in this benchmark
 
 <img width="300px" src="./images/balls_benchmark.jpg"></img>
+
+</v-click>
 
 ::right::
   
 <div style="display: flex; gap: 20px; align-items: center;">
   <SlidevVideo v-click="1" autoplay controls width="220px">
-    <source src="./images/pythonballs.mp4" type="video/mp4" />
+    <source src="/pythonballs.mp4" type="video/mp4" />
   </SlidevVideo>
   <p>Native Python</p>
 </div>
 
 <div style="display: flex; gap: 20px; align-items: center;">
   <SlidevVideo v-click="1" autoplay controls width="220px">
-    <source src="./images/wtpballs.mp4" type="video/mp4" />
+    <source src="/wtpballs.mp4" type="video/mp4" />
   </SlidevVideo>
   <p>WebTigerPython</p>
 </div>
@@ -353,21 +352,29 @@ zoom: 1.3
 ---
 # Evaluation 3 - Teacher Survey
 
+<v-clicks>
+
 - Userbase 12 years and above
   - Most Users 15 - 17 years
 - URL Sharing was liked
 - Easy integratable into other tools
 - Simple
 
+</v-clicks>
+
 ---
 zoom: 1.3
 ---
 # More to explore!
 
+<v-clicks>
+
 - Debugger
 - Robotics Simulator
 - Pygame out of the box
 - Music
+
+</v-clicks>
 
 ---
 zoom: 1.3
@@ -414,7 +421,7 @@ code: |
 # WebTiger-
 # Python
 
-- Educational IDE
+- [webtigerpython.ethz.ch](https://webtigerpython.ethz.ch)
 - Low Floor (Turtle, Robotics)
 - High Ceiling (Events, Scientific Computing)
 - Benchmarks
