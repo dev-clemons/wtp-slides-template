@@ -62,15 +62,17 @@ zoom: 1.2
 layout: two-cols-header 
 ---
 
-# Educational IDE - Requirements
+# Educational IDEs - Problem Statement
 
 ::left::
 
-- Simple
-- Fast
+- Easy to set up
+  - no installation / login
 - Works on any device
-- Robotics
-- Visual Output
+  - BYOD
+- Simple UI
+- Reliable
+  - Replit
 
 ::right::
 
@@ -103,13 +105,21 @@ zoom: 1.2
 
 ::left::
 
+- Easy to set up -> Web Based
 - Works on any device -> Web Based
+- Reliable -> Open Source
 - Web Worker to execute code
 - Web APIs for robotics / files
 
 ::right::
 
+<v-click>
+
+### Architecture
+
 <img src="./images/system_overview.svg"> </img>
+
+</v-click>
 
 ---
 layout: wtp-2-cols
@@ -132,6 +142,7 @@ code: |
 - Reimplementation from scratch
   - TKinter does not work in the browser
 - PixiJS
+  - Fast 2d graphics rendering library
 
 ---
 layout: wtp-2-cols
@@ -171,7 +182,7 @@ code: |
 ---
 # High Ceiling 1 - Scientific Python
 
-- Numpy / Scipy / Matplotlib
+- NumPy / SciPy / Matplotlib
   - Thanks to Pyodide
 - Use agg (Anti-Grain Geometry) to render
 - Limitation: no direct access to the DOM
@@ -297,26 +308,10 @@ code: |
   - Mouse
 
 ---
-layout: wtp-2-cols
-code: |
-  import numpy as np
-  import matplotlib.pyplot as plt
-
-  x = np.arange(0, 10.01, 0.01)
-  f1 = np.sin (x)
-  f2 = np. cos (x)
-  f3 = 0.01 * x**2 + 0.15 * x - 1
-
-  plt.plot(x, f1, color="red")
-  plt.plot(x, f2, color="blue")
-  plt.plot(x, f3, color="green")
-
-  plt. show()
-
----
 zoom: 0.9
 ---
-# Evaluation 1 - Compuing Benchmark
+
+# Evaluation 1 - Computing Benchmark
 
 ## Mandelbrot Set Computation
 **Test Case:** 200×200 pixel image with 4,000,000 iterations of z′ = z² + c
@@ -354,7 +349,8 @@ layout: two-cols
 </div>
 
 ---
-
+zoom: 1.3
+---
 # Evaluation 3 - Teacher Survey
 
 - Userbase 12 years and above
@@ -364,7 +360,8 @@ layout: two-cols
 - Simple
 
 ---
-
+zoom: 1.3
+---
 # More to explore!
 
 - Debugger
@@ -373,13 +370,13 @@ layout: two-cols
 - Music
 
 ---
+zoom: 1.3
+---
 
 # Future Work
 
 - Multifile
 - Robots over WiFi
-...
-
 
 ---
 layout: wtp-2-cols
@@ -413,6 +410,7 @@ code: |
       )
 
 ---
+
 # WebTiger-
 # Python
 
