@@ -134,8 +134,7 @@ code: |
 ---
 # Low Floor 1 - Turtle
 
-- Reimplementation from scratch
-  - TKinter does not work in the browser
+- TKinter does not work in the browser
 - PixiJS
   - Fast 2d graphics rendering library
 
