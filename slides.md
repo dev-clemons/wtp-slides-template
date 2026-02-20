@@ -78,10 +78,13 @@ layout: two-cols-header
 
 | High Ceiling |  |
 |----|----|
-| <img src="https://matplotlib.org/_static/logo_dark.svg" width="120"> | <img src="https://pypi-camo.freetls.fastly.net/61176205c57617d9a603918334772386cbe1bad8/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f707967616d652d636f6d6d756e6974792f707967616d652d63652f6d61696e2f646f63732f726553542f5f7374617469632f707967616d655f63655f6c6f676f2e737667" width="120"> |
+| <img src="https://matplotlib.org/_static/logo_dark.svg" width="120"> | <img src="https://scipy.org/images/logo.svg" width="70"> |
 
 </v-click>
 
+<br>
+<br>
+<br>
 
 <v-click at="1">
 
@@ -279,7 +282,6 @@ code: |
       forward(10)
       delay(1000/fps)
 
-      # Falls es unten rausfaellt oben wieder rein
       teleport()
 
   print(name, "you scored", points, "points")
@@ -288,10 +290,9 @@ code: |
   else:
       print("LOST")
 ---
-# High Ceiling 1 - Interactive Programming
+# High Ceiling 2 - Interactive Programming
 
-- Input
-- Inputisteners
+- Input listeners
   - Keyboard
   - Mouse
 
@@ -311,14 +312,6 @@ code: |
   plt.plot(x, f3, color="green")
 
   plt. show()
----
-# High Ceiling 2 - Scientific Python
-
-- Numpy / Scipy / Matplotlib
-- Use agg to render within python
-- Limitation
-  - No events
-  - No animations
 
 ---
 zoom: 0.9
@@ -376,7 +369,7 @@ layout: two-cols
 
 - Debugger
 - Robotics Simulator
-- Pygame integration
+- Pygame out of the box
 - Music
 
 ---
@@ -391,17 +384,41 @@ layout: two-cols
 ---
 layout: wtp-2-cols
 code: |
-  from
+  from turtle import *
+
+
+  speed(0)
+  penup()
+  hideturtle()
+
+  q = 100
+
+  goto(-100, (-100 ** 2) / 50 + q)
+
+  pendown()
+
+  for x in range(-100, 101):
+      width(abs(x/10) + 5)
+      y = -(x ** 2) / 50
+      goto(x, y + q)
+
+  penup()
+  goto(0,-20)
+  color("orange")
+  write("THANK YOU SIGCSE!", 
+        align="center", 
+        font=("Brush Script MT", 
+              40, 
+              'normal')
+      )
+
 ---
-# WebTigerPython
+# WebTiger-
+# Python
 
 - Educational IDE
-- Low Floor
-  - Turtle
-  - Robotics
-- High Ceiling
-  - Interactive Programming
-  - Scienctific Progamming
+- Low Floor (Turtle, Robotics)
+- High Ceiling (Events, Scientific Computing)
 - Benchmarks
   - 2-3 Times slower than Native Python
-  - WTP turtle is faster in our Benchmark
+  - Fast Rendering
