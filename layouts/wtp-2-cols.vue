@@ -14,6 +14,10 @@
 <script setup>
 import LZString from "lz-string";
 const props = defineProps({
+  base: {
+    type: String,
+    required: false
+  },
   code: {
     type: String,
     required: true,
@@ -30,6 +34,10 @@ const props = defineProps({
     type: String,
     default: ''
   },
+  playground: {
+    type: String,
+    default: ''
+  }
   
 });
 
@@ -41,8 +49,15 @@ function encodeInputCode(inputCode) {
 }
 
 let base = "https://webtigerpython.ethz.ch"
+if(props.base){
+  base = props.base
+}
 let encodedCode = encodeInputCode(props.code)
 let url = new URL(base);
+if(props.playground){
+  console.log(props.playground)
+  url.searchParams.append("playground", props.playground)
+}
 url.searchParams.append("code", encodedCode);
 url.searchParams.append("device", props.device)
 if(props.wtpLayout){
