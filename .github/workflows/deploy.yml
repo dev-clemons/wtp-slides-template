@@ -52,3 +52,6 @@ jobs:
           branch: gh-pages
           target-folder: ${{ steps.vars.outputs.target }}
           clean: true
+          clean-exclude: |
+            feature/**
+            feature
