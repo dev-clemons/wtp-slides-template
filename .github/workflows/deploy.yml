@@ -3,19 +3,19 @@ name: Deploy pages
 on:
   workflow_dispatch:
   push:
-    branches: ['*'] 
+    branches:
+      - main
+      - 'feature/**'
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,24 +31,24 @@ jobs:
       - name: Install dependencies
         run: nci
 
+      - name: Compute base path and target folder
+        id: vars
+        run: |
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            echo "base=/${{ github.event.repository.name }}/" >> "$GITHUB_OUTPUT"
+            echo "target=" >> "$GITHUB_OUTPUT"
+          else
+            echo "base=/${{ github.event.repository.name }}/${{ github.ref_name }}/" >> "$GITHUB_OUTPUT"
+            echo "target=${{ github.ref_name }}" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build
-        run: nr build --base /${{github.event.repository.name}}
+        run: nr build --base "${{ steps.vars.outputs.base }}"
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - uses: actions/upload-pages-artifact@v3
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: dist
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          folder: dist
+          branch: gh-pages
+          target-folder: ${{ steps.vars.outputs.target }}
+          clean: true
