@@ -80,7 +80,11 @@ layout: wtp-2-cols
 code: |
   from turtle import *
 
-  colors = ["red", "blue", "yellow", "green"]
+  colors = ["red", 
+            "blue", 
+            "yellow", 
+            "green"]
+
   for c in colors:
       for i in range(4):
           pencolor(c)
@@ -120,7 +124,7 @@ code: |
 <v-clicks>
 
 - Filtered: sessions of 10–60 minutes
-- 200 sessions with an `if`-adjacent error
+- 200 sessions containing conditionals
 - Hand-checked by the authors
 - → **567 error events**, 120 sessions
 
