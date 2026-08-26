@@ -1,0 +1,15 @@
+.slidev-layout {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.slidev-layout li {
+  margin-bottom: 0.35em;
+}
+
+.slidev-layout pre,
+.slidev-layout code,
+.slidev-layout .font-mono {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
+}
