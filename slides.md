@@ -159,18 +159,19 @@ code: |
 <thead>
 <tr class="text-left opacity-50 text-sm">
 <th class="pb-1 font-normal">Error category</th>
+<th class="pb-1 font-normal">Example</th>
 <th class="pb-1 font-normal text-right"></th>
 </tr>
 </thead>
 <tbody>
 
-<tr v-click><td class="py-1">Coincidental (unrelated)</td><td class="text-right font-bold">29%</td></tr>
-<tr v-click><td class="py-1">Colon required</td><td class="text-right font-bold">19%</td></tr>
-<tr v-click><td class="py-1">Structure</td><td class="text-right font-bold">17%</td></tr>
-<tr v-click><td class="py-1">Indentation</td><td class="text-right font-bold">16%</td></tr>
-<tr v-click><td class="py-1">Comparison</td><td class="text-right font-bold">14%</td></tr>
-<tr v-click><td class="py-1">Incomplete statement</td><td class="text-right font-bold">3%</td></tr>
-<tr v-click><td class="py-1">Misspelling / typo</td><td class="text-right font-bold">2%</td></tr>
+<tr v-click><td class="py-1">Coincidental (unrelated)</td><td class="font-mono text-sm opacity-70">if Maht.sqrt(x) &lt; 1/x:</td><td class="text-right font-bold">29%</td></tr>
+<tr v-click><td class="py-1">Colon required</td><td class="font-mono text-sm opacity-70">if (my_list[index] % 2 == 0)</td><td class="text-right font-bold">19%</td></tr>
+<tr v-click><td class="py-1">Structure</td><td class="font-mono text-sm opacity-70">elif: x == "example":</td><td class="text-right font-bold">17%</td></tr>
+<tr v-click><td class="py-1">Indentation</td><td class="font-mono text-sm opacity-70">&nbsp;&nbsp;&nbsp;&nbsp;if i &lt; 0:</td><td class="text-right font-bold">16%</td></tr>
+<tr v-click><td class="py-1">Comparison</td><td class="font-mono text-sm opacity-70">elif s >= 16 and &lt;= 26:</td><td class="text-right font-bold">14%</td></tr>
+<tr v-click><td class="py-1">Incomplete statement</td><td class="font-mono text-sm opacity-70">if note ==</td><td class="text-right font-bold">3%</td></tr>
+<tr v-click><td class="py-1">Misspelling / typo</td><td class="font-mono text-sm opacity-70">if input_num == 22.</td><td class="text-right font-bold">2%</td></tr>
 
 </tbody>
 </table>
@@ -201,14 +202,6 @@ code: |
 <div v-click class="mt-8 opacity-70">
 Mostly good... on paper (α = 0.38 — raters often disagreed here)
 </div>
-
-<!--
-Actionable The message suggests a concrete and unambiguous correction.
-
-Specific hint The message contains a specific idea or description of the issue, but not directly a single action
-
-Unspecific descr. An unspecific description that something is wrong.
--->
 
 ---
 
@@ -317,3 +310,4 @@ class: 'text-center'
 ### Questions?
 
 Clemens Bachmann - clemens.bachmann@inf.ethz.ch
+
